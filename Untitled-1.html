@@ -1,0 +1,355 @@
+<think>```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine untuk Mantan Tersayang</title>
+    <style>
+        /* Import romantic and readable fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap');
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif; /* Readable and slightly romantic sans-serif */
+            background: linear-gradient(135deg, #ffe6f0 0%, #e6f7ff 50%, #f0e6ff 100%); /* Enhanced pastel gradient */
+            color: #5a4a6a; /* Soft lavender text */
+            overflow-x: hidden;
+            position: relative;
+            animation: backgroundPulse 10s ease-in-out infinite; /* Subtle background animation */
+        }
+        @keyframes backgroundPulse {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Floating elements with more variety */
+        .floating-heart {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 6s ease-in-out infinite, pulse 2s ease-in-out infinite;
+            opacity: 0.8;
+        }
+        .sparkle {
+            position: absolute;
+            font-size: 1.5rem;
+            animation: sparkle 4s ease-in-out infinite, rotate 5s linear infinite;
+        }
+        .petal {
+            position: absolute;
+            font-size: 1rem;
+            animation: drift 8s linear infinite, sway 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes drift {
+            0% { transform: translateX(0px) rotate(0deg); }
+            100% { transform: translateX(100vw) rotate(360deg); }
+        }
+        @keyframes sway {
+            0%, 100% { transform: translateX(0px); }
+            50% { transform: translateX(10px); }
+        }
+
+        /* Sections with enhanced animations */
+        section {
+            margin: 60px 0;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideIn 1.5s ease-out forwards, glow 3s ease-in-out infinite;
+        }
+        @keyframes slideIn {
+            to { opacity: 1; transform: translateY(0px); }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 157, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(255, 107, 157, 0.5); }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px); /* Professional glass effect */
+        }
+        .hero-illustration {
+            width: 250px;
+            height: 180px;
+            margin: 0 auto 30px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjE4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI2NSIgY3k9IjYwIiByIzMwIiBmaWxsPSIjZmZlYWZmIi8+PGNpcmNsZSBjeD0iNjUiBjeT0iNTAiIHI9IjE1IiBmaWxsPSIjMDAwIi8+PGNpcmNsZSBjeD0iMTg1IiBjeT0iNjAiIHI9IjMwIiBmaWxsPSIjZmZlYWZmIi8+PGNpcmNsZSBjeD0iMTg1IiBjeT0iNTAiIHI9IjE1IiBmaWxsPSIjMDAwIi8+PHJlY3QgeD0iNDAiIHk9IjEwMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjZmZlYWZmIi8+PHJlY3QgeD0iMTYwIiB5PSIxMDAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iI2ZmZWFmZiIvPjxwYXRoIGQ9Ik0xMjUsNTAgQzEwMCw1MCA5MCw2MCA5MCw3NSBDOTAsOTAgMTAwLDEwMCAxMjUsMTIwIEMxNTAsMTAwIDE2MCw5MCAxNjAsNzUgQzE2MCw2MCAxNTAsNTAgMTI1LDUwIFoiIGZpbGw9IiNmZjZiOWQiLz48L3N2Zz4=') no-repeat center; /* Enhanced chibi SVG with heart */
+            background-size: contain;
+            animation: bounce 3s ease-in-out infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .hero h1 {
+            font-family: 'Great Vibes', cursive; /* More romantic handwritten font */
+            font-size: 3rem;
+            color: #ff6b9d; /* Soft red */
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            animation: textGlow 2s ease-in-out infinite;
+        }
+        @keyframes textGlow {
+            0%, 100% { text-shadow: 0 3px 6px rgba(255, 107, 157, 0.3); }
+            50% { text-shadow: 0 3px 12px rgba(255, 107, 157, 0.6); }
+        }
+        .hero p {
+            font-size: 1.3rem;
+            color: #a8a8e6; /* Baby blue */
+            font-weight: 300;
+        }
+
+        /* Message Section with typing effect */
+        .message {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .message p {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.8rem;
+            line-height: 1.8;
+            color: #5a4a6a;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #ff6b9d;
+            animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #ff6b9d; }
+        }
+
+        /* Memory Section - Fixed layout to prevent text overflow */
+        .memory {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .polaroid {
+            background: #fff;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            min-height: 280px; /* Fixed min-height to contain content */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden; /* Prevent overflow */
+            transition: all 0.4s ease;
+            animation: fadeInScale 2s ease-out;
+        }
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .polaroid:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        }
+        .polaroid img {
+            width: 100%;
+            height: 120px; /* Fixed height for image */
+            object-fit: cover; /* Ensure image fits without distortion */
+            border-radius: 10px;
+            transition: filter 0.3s;
+        }
+        .polaroid:hover img {
+            filter: brightness(1.1) sepia(0.2);
+        }
+        .polaroid p {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            color: #ff6b9d;
+            font-weight: 400;
+            line-height: 1.4;
+            flex-grow: 1; /* Allow text to take remaining space */
+            overflow: hidden; /* Hide overflow text */
+            text-overflow: ellipsis; /* Add ellipsis if too long */
+        }
+
+        /* Valentine Wish Section */
+        .wish {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        .wish-illustration {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNTAsMTAgQzMwLDEwIDIwLDIwIDIwLDMwIEMyMCw0MCAzMCw1MCA1MCw3MCBDNzAsNTAgODAsNDAgODAsMzAgQzgwLDIwIDcwLDEwIDUwLDEwIFoiIGZpbGw9IiNmZjZiOWQiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjMwIiByIjEwIiBmaWxsPSIjZmZlYWZmIi8+PC9zdmc+') no-repeat center; /* Heart mascot SVG */
+            background-size: contain;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .wish p {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: #5a4a6a;
+        }
+
+        /* Closing Section */
+        .closing {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .closing p {
+            font-size: 1.3rem;
+            color: #5a4a6a;
+            font-weight: 300;
+        }
+        .floating-hearts {
+            position: relative;
+            height: 120px;
+            overflow: hidden;
+        }
+        .heart-up {
+            position: absolute;
+            font-size: 2.5rem;
+            animation: floatUp 6s ease-out infinite, spin 4s linear infinite;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(120px); opacity: 1; }
+            100% { transform: translateY(-120px); opacity: 0; }
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Interactions */
+        .clickable-heart {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .clickable-heart:hover {
+            transform: scale(1.3);
+            filter: drop-shadow(0 0 10px #ff6b9d);
+        }
+
+        /* Audio Player */
+        .audio-player {
+            margin: 30px 0;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+        }
+        audio {
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+        audio:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .message p { font-size: 1.5rem; }
+            .polaroid { width: 160px; min-height: 250px; }
+            .polaroid img { height: 100px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- More floating elements for immersion -->
+    <div class="floating-heart" style="left: 5%; top: 10%;">💖</div>
+    <div class="sparkle" style="left: 15%; top: 25%;">✨</div>
+    <div class="petal" style="left: 2%; top: 40%;">🌸</div>
+    <div class="floating-heart" style="right: 10%; top: 15%;">💕</div>
+    <div class="sparkle" style="right: 20%; top: 35%;">✨</div>
+    <div class="petal" style="right: 5%; top: 50%;">🌸</div>
+    <div class="floating-heart" style="left: 80%; top: 60%;">❤️</div>
+    <div class="sparkle" style="left: 70%; top: 75%;">✨</div>
+    <div class="petal" style="right: 80%; top: 85%;">🌸</div>
+
+    <div class="container">
+        <!-- Audio Player -->
+        <div class="audio-player">
+            <p>Dengarkan lagu "Mantan Terindah" oleh Raisa sambil membaca pesan ini 🎶</p>
+            <audio id="bg-music" controls loop>
+                <source src="aset/mantan terindah.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-illustration"></div>
+            <h1>Selamat Hari Valentine, Mantan Tersayang 💗</h1>
+            <p>Beberapa perasaan tidak hilang — mereka hanya belajar diam.</p>
+        </section>
+
+        <!-- Message Section -->
+        <section class="message">
+            <p>“Meskipun kita tidak lagi berjalan di jalan yang sama, sebagian hatiku masih berharap kamu mendapat kehangatan, tawa, dan cinta — terutama hari ini. Ingat saat awal perasaan kita saat main gobak sodor? Kamu jatuh saat kejar-kejaran sampai hampir mewek, dan malu-malu saat deket. Lucu banget, ya! 😄”</p>
+        </section>
+
+        <!-- Memory Section -->
+        <section class="memory">
+            <div class="polaroid">
+                <img src="aset/gobaksodor.png" alt="Kenangan 1">
+                <p>Masih ingat aku awal mula kita jatuh cinta saat main gobak sodor bareng, hahaha lucu banget!</p>
+            </div>
+            <div class="polaroid">
+                <img src="aset/Jatoh.png"Kenangan 2">
+                <p>Masih ingat kamu jatuh saat kejar-kejaran sampai hampir mewek — lucu banget!</p>
+            </div>
+            <div class="polaroid">
+                <img src="aset/Malu Malu.png" kemenangan 3">
+                <p>Masih tersenyum ingat malu-malumu saat deket. Dari jauh, aku masih dukung kamu!</p>
+            </div>
+        </section>
+
+        <!-- Valentine Wish Section -->
+        <section class="wish">
+            <div class="wish-illustration"></div>
+            <p>“Ini bukan permintaan, bukan penyesalan —<br>
+            hanya harapan Valentine yang lembut<br>
+            dari seseorang yang dulu sangat mencintaimu.<br>
+            <br>
+            Eh, tapi sebenernya... kalau dipikir-pikir lagi, kenangan kita tuh lucu banget, kan? Main gobak sodor yang bikin jantung berdegup kenceng, kamu jatuh kejar-kejaran sampe hampir nangis tapi tetep ketawa, dan malu-malumu saat deket yang bikin aku pengen peluk terus. Sekarang aku lagi mikir, apa kabar kalau kita coba lagi? Bukan balikan yang serius-serius amat, tapi kayak main gobak sodor lagi deh — santai, fun, dan siapa tau bikin jatuh cinta ulang. Kamu masih suka es krim coklat kayak dulu? Atau sekarang lebih suka yang rasa stroberi? Aku masih inget kamu suka ketawa kalau aku cerita joke receh. Yuk, ajak aku balik lagi, tapi kali ini tanpa jatuh-jatuhan. Atau jatuhnya ke pelukan aja, gimana? 😘💕 Kalau kamu bilang 'iya', aku janji bakal bikin hari Valentine ini lebih manis dari es krim favoritmu. Tunggu balasanmu, ya! Dari mantan yang masih sayang banget.”</p>
+        </section>
